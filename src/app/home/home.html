@@ -1,0 +1,47 @@
+<div>
+  <span x-large>Your Content Here</span>
+  <form (ngSubmit)="submitState(localState.value)">
+    <md-input placeholder="Character count (100 max)" maxLength="100" class="demo-full-width"
+              value="Hello world. How are you?"
+              #characterCountHintExample>
+      <md-hint align="end">{{characterCountHintExample.characterCount}} / 100</md-hint>
+    </md-input>
+
+    <button md-button>FLAT</button>
+    <button md-raised-button>RAISED</button>
+    <button md-icon-button>
+      <i class="material-icons md-24">favorite</i>
+    </button>
+    <button md-fab>
+      <i class="material-icons md-24">add</i>
+    </button>
+    <button md-mini-fab>
+      <i class="material-icons md-24">add</i>
+    </button>
+    <md-radio-group>
+      <md-radio-button value="option_1">1</md-radio-button>
+      <md-radio-button value="option_2">2</md-radio-button>
+    </md-radio-group>
+    <md-toolbar [color]="myColor">
+      <span>First Row</span>
+
+      <md-toolbar-row>
+        <span>Second Row</span>
+      </md-toolbar-row>
+
+      <md-toolbar-row>
+        <span>Third Row</span>
+      </md-toolbar-row>
+    </md-toolbar>
+  </form>
+  <!--
+    Rather than wiring up two-way data-binding ourselves with [value] and (input)
+    we can use Angular's [(ngModel)] syntax
+    <input type="text" [(ngModel)]="localState.value" autofocus>
+  -->
+  For hot module reloading run
+  <pre>npm run start:hmr</pre>
+  <hr>
+  <pre>this.localState = {{ localState | json }}</pre>
+
+</div>
