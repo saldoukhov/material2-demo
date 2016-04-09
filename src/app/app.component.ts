@@ -9,6 +9,9 @@ import {AppState} from './app.service';
 import {RouterActive} from './router-active';
 import {ButtonDemo} from './button/button-demo';
 import {InputDemo} from './input/input-demo';
+import {ToolbarDemo} from './toolbar/toolbar-demo';
+import {CardDemo} from './card/card-demo';
+import {RadioDemo} from './radio/radio-demo';
 
 /*
  * App Component
@@ -49,10 +52,19 @@ import {InputDemo} from './input/input-demo';
             <a [routerLink]=" ['Home'] ">Home</a>
           </li>
           <li router-active>
-            <a [routerLink]=" ['ButtonDemo'] ">Button Demo</a>
+            <a [routerLink]=" ['ButtonDemo'] ">Button</a>
           </li>
           <li router-active>
-            <a [routerLink]=" ['InputDemo'] ">Input Demo</a>
+            <a [routerLink]=" ['RadioDemo'] ">Radio</a>
+          </li>
+          <li router-active>
+            <a [routerLink]=" ['InputDemo'] ">Input</a>
+          </li>
+          <li router-active>
+            <a [routerLink]=" ['ToolbarDemo'] ">Toolbar</a>
+          </li>
+          <li router-active>
+            <a [routerLink]=" ['CardDemo'] ">Card</a>
           </li>
         </ul>
       </nav>
@@ -68,6 +80,9 @@ import {InputDemo} from './input/input-demo';
   { path: '/home',  name: 'Home',  component: Home },
   { path: '/button-demo',  name: 'ButtonDemo',  component: ButtonDemo },
   { path: '/input-demo',  name: 'InputDemo',  component: InputDemo },
+  { path: '/toolbar-demo',  name: 'ToolbarDemo',  component: ToolbarDemo },
+  { path: '/card-demo',  name: 'CardDemo',  component: CardDemo },
+  { path: '/radio-demo',  name: 'RadioDemo',  component: RadioDemo },
 ])
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
